@@ -1,0 +1,564 @@
+/* ===================================
+RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===================================
+BODY / FUNDO LOGIN E CADASTRO
+=================================== */
+
+body{
+
+    font-family: Arial, sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-image:url("../../../imagem/fundo.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ===================================
+CONTAINERS LOGIN / CADASTRO
+=================================== */
+
+.login-container,
+.cadastro-container{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+/* ===================================
+CARDS LOGIN / CADASTRO
+=================================== */
+
+.login-card,
+.cadastro-card{
+
+    width:650px;
+
+    padding:40px;
+
+    border-radius:35px;
+
+    background:linear-gradient(
+        to bottom,
+        #f6b6f2,
+        #f3c2f4,
+        #f6efc7
+    );
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===================================
+TOPO LOGIN / CADASTRO
+=================================== */
+
+.brand{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin-bottom:35px;
+}
+
+.logo{
+
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.brand h1{
+
+    font-size:34px;
+    color:#2f1a1a;
+}
+
+.brand small{
+
+    color:#444;
+    font-size:15px;
+}
+
+/* ===================================
+LABELS
+=================================== */
+
+label{
+
+    display:block;
+
+    margin-top:18px;
+    margin-bottom:8px;
+
+    color:#2f1a1a;
+
+    font-size:18px;
+}
+
+/* ===================================
+INPUTS
+=================================== */
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#f8f8ef;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+/* ===================================
+BOTÕES
+=================================== */
+
+.buttons{
+
+    display:flex;
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-top:35px;
+}
+
+.btn{
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.entrar{
+    background:#f6a7ff;
+    color:#2f1a1a;
+}
+
+.cadastrar,
+.cadastrar-btn{
+    background:#efb6ff;
+    color:#2f1a1a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ===================================
+DASHBOARD (NOVO)
+=================================== */
+
+.dashboard-body{
+
+    font-family: Arial, sans-serif;
+
+    min-height:100vh;
+
+    background-image:url("../../../imagem/fundo.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    padding:40px;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+/* card do dashboard */
+.dashboard-container{
+    width:100%;
+    max-width:1100px;
+}
+
+/* topo dashboard */
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,0.85);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+}
+
+/* logo dashboard */
+.dashboard-logo{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* card principal */
+.card{
+
+    background:linear-gradient(
+        to bottom,
+        #f6b6f2,
+        #f3c2f4,
+        #f6efc7
+    );
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* nav */
+.nav{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.nav a{
+
+    text-align:center;
+
+    padding:12px;
+
+    background:#f6a7ff;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#2f1a1a;
+
+    transition:0.3s;
+}
+
+.nav a:hover{
+    transform:scale(1.05);
+}
+
+/* kpis */
+.kpis{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.kpi{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kpi .value{
+    font-size:28px;
+    font-weight:bold;
+    color:#a64ac9;
+}
+
+/* responsivo */
+@media(max-width:800px){
+    .login-card,
+    .cadastro-card{
+        width:95%;
+    }
+}
+
+/* ===================================
+PRODUTOS
+=================================== */
+
+.produtos-body{
+
+    font-family: Arial, sans-serif;
+
+    min-height:100vh;
+
+    background-image:url("../../../imagem/fundo.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    padding:40px;
+
+    display:block;
+}
+
+/* topo */
+.header{
+
+    width:100%;
+
+    margin-bottom:25px;
+}
+
+.header-inner{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,0.88);
+
+    padding:20px 30px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* container */
+.container{
+
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+}
+
+/* grid */
+.grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+/* cards */
+.card{
+
+    background:linear-gradient(
+        to bottom,
+        #f6b6f2,
+        #f3c2f4,
+        #f6efc7
+    );
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* formulário */
+.form-group{
+
+    margin-bottom:20px;
+}
+
+.input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+/* ações */
+.actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:20px;
+}
+
+/* botões */
+.btn{
+
+    padding:12px 22px;
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    font-size:15px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.btn-primary{
+    background:#f6a7ff;
+    color:#2f1a1a;
+}
+
+.btn-danger{
+    background:#ff8f8f;
+    color:white;
+}
+
+.btn-success{
+    background:#91d891;
+    color:white;
+}
+
+.btn-ghost{
+    background:#ffffff;
+    color:#2f1a1a;
+}
+
+/* tabela */
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+.table th{
+
+    background:#f6a7ff;
+
+    color:#2f1a1a;
+
+    padding:15px;
+
+    text-align:left;
+}
+
+.table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+}
+
+/* imagem */
+.thumb{
+
+    width:70px;
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+}
+
+/* tags */
+.tag{
+
+    padding:6px 12px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+.ok{
+    background:#c8f7c5;
+    color:#207520;
+}
+
+.off{
+    background:#ffd2d2;
+    color:#b30000;
+}
+
+/* badge */
+.badge{
+
+    background:#f6a7ff;
+
+    padding:6px 12px;
+
+    border-radius:12px;
+
+    margin-left:10px;
+
+    font-size:14px;
+}
