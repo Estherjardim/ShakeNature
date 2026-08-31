@@ -1,0 +1,346 @@
+/* ==============================
+SHAKE NATURE
+ESTILO PRINCIPAL
+============================== */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+min-height: 100vh;
+
+background:
+radial-gradient(circle at 10% 20%, #ffd6df 0 8%, transparent 9%),
+radial-gradient(circle at 90% 10%, #ffe2b8 0 9%, transparent 10%),
+linear-gradient(135deg, #fffaf3, #ffeef0);
+
+color: #5a3d35;
+}
+
+/* ==============================
+TOPO
+============================== */
+
+.topbar {
+width: 92%;
+margin: 25px auto;
+
+padding: 20px 30px;
+
+background: rgba(255, 255, 255, 0.85);
+
+border-radius: 25px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+box-shadow: 0 10px 30px rgba(150, 90, 50, 0.12);
+
+transform: rotate(-1deg);
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+
+font-size: 25px;
+font-weight: bold;
+
+color: #e87532;
+}
+
+.logo {
+font-size: 35px;
+}
+
+.menu {
+font-size: 15px;
+}
+
+.menu a {
+color: #e87532;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* ==============================
+CONTAINER
+============================== */
+
+.container {
+width: 92%;
+max-width: 1250px;
+margin: 40px auto;
+}
+
+/* ==============================
+CABEÇALHO
+============================== */
+
+.page-header {
+margin-bottom: 25px;
+
+transform: rotate(-1deg);
+}
+
+.page-header h1 {
+font-size: 38px;
+color: #df6429;
+}
+
+.page-header small {
+color: #9b7769;
+}
+
+/* ==============================
+GRID
+============================== */
+
+.grid {
+display: grid;
+grid-template-columns: 1fr 2fr;
+
+gap: 25px;
+
+align-items: start;
+}
+
+/* ==============================
+CARDS
+============================== */
+
+.card {
+background: rgba(255, 255, 255, 0.88);
+
+border-radius: 25px;
+
+padding: 25px;
+
+box-shadow:
+0 15px 35px rgba(150, 90, 50, 0.13);
+
+border: 2px solid rgba(255, 190, 120, 0.25);
+
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px) rotate(-0.5deg);
+}
+
+.card:nth-child(1) {
+transform: rotate(-1.5deg);
+}
+
+.card:nth-child(2) {
+transform: rotate(1deg);
+}
+
+.card h2 {
+color: #df6429;
+margin-bottom: 20px;
+}
+
+/* ==============================
+FORMULÁRIO
+============================== */
+
+label {
+display: block;
+
+margin-top: 15px;
+margin-bottom: 6px;
+
+font-weight: bold;
+
+color: #6d5147;
+}
+
+.input {
+width: 100%;
+
+padding: 13px 16px;
+
+border: 2px solid #f4d6b8;
+
+border-radius: 14px;
+
+background: #fffaf7;
+
+outline: none;
+
+font-size: 14px;
+
+transition: 0.2s;
+}
+
+.input:focus {
+border-color: #f39a48;
+
+box-shadow:
+0 0 0 4px rgba(243, 154, 72, 0.12);
+}
+
+/* ==============================
+BOTÕES
+============================== */
+
+.actions {
+display: flex;
+
+gap: 10px;
+
+margin-top: 20px;
+}
+
+.btn {
+display: inline-block;
+
+padding: 11px 18px;
+
+border-radius: 14px;
+
+border: none;
+
+text-decoration: none;
+
+cursor: pointer;
+
+font-weight: bold;
+
+background: #ffe0b5;
+
+color: #8a4b25;
+
+transition: 0.2s;
+}
+
+.btn:hover {
+transform: translateY(-2px);
+}
+
+.btn-primary {
+background: linear-gradient(
+135deg,
+#ff9b45,
+#ed6d32
+);
+
+color: white;
+}
+
+.btn-danger {
+background: #ffd1c7;
+color: #b63c25;
+}
+
+.btn-success {
+background: #ffe3a8;
+color: #8b5b00;
+}
+
+/* ==============================
+TABELA
+============================== */
+
+.table {
+width: 100%;
+
+border-collapse: separate;
+border-spacing: 0 8px;
+}
+
+.table th {
+text-align: left;
+
+padding: 12px;
+
+color: #9b5b32;
+}
+
+.table td {
+padding: 14px 12px;
+
+background: #fff9f3;
+}
+
+.table tr td:first-child {
+border-radius: 12px 0 0 12px;
+}
+
+.table tr td:last-child {
+border-radius: 0 12px 12px 0;
+}
+
+/* ==============================
+STATUS
+============================== */
+
+.tag {
+padding: 6px 10px;
+
+border-radius: 20px;
+
+font-size: 12px;
+
+font-weight: bold;
+}
+
+.tag.ok {
+background: #fff0c9;
+color: #a86a00;
+}
+
+.tag.off {
+background: #ffe0da;
+color: #b84b38;
+}
+
+/* ==============================
+FOOTER
+============================== */
+
+footer {
+text-align: center;
+
+padding: 30px;
+
+color: #a17c6b;
+
+font-size: 14px;
+}
+
+footer strong {
+color: #df6429;
+}
+
+/* ==============================
+RESPONSIVO
+============================== */
+
+@media (max-width: 850px) {
+
+.grid {
+grid-template-columns: 1fr;
+}
+
+.topbar {
+flex-direction: column;
+gap: 15px;
+}
+
+.table {
+font-size: 12px;
+}
+
+.card:nth-child(1),
+.card:nth-child(2) {
+transform: none;
+}
+}
